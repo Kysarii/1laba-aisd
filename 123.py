@@ -1,13 +1,13 @@
 #Вариант 16. Четные двоичные числа, не превышающие 819210, в которых встречается не более одной серии из трех подряд идущих нуля. Выводит на экран цифры числа, исключая нули. 
 #Отдельно выводится прописью номер позиции, с которой начинается эта серия.
-file = open('7.txt', 'r')
+file = open('7.txt')
 while True:
     a = file.readline().split()
     if not a:
         print('Файл закончился')
         break
     for num_str in a:
-        if all(c in '01' for c in num_str):
+        if int(num_str) == int((bin(abs(int(num_str)))[2:])):
             num = int(num_str, 2)
         else:
             num = int(num_str)
