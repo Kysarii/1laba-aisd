@@ -18,4 +18,5 @@ while True:
             if k == 1:
                 pos = b.find('*') + 1
                 b = b.replace("*", "")
-                print(b, pos)
+                print("Число исключая серию 000:", b)
+                print("Номер позиции ", pos)
