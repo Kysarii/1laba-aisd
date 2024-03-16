@@ -8,8 +8,8 @@ while True:
         break
     for num in a:
         if all('0'<= num_str <= '1' for num_str in num):
-            if int(num) <= 8192 and int(num) % 2 == 0:
-                b = str(bin(abs(int(num)))[2:])
+            if int(num,2) <= 8192 and int(num,2) % 2 == 0:
+                b = str(num)
                 b = b.replace("000", "*")
                 k = b.count("*")
                 if k == 1:
